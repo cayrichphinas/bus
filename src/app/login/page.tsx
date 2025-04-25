@@ -11,7 +11,7 @@ export default function Login() {
       <header className="flex justify-between items-center p-4 sm:px-8 border-b border-gray-700 z-10 relative">
         <div className="flex items-center">
           <Image
-            src="/image/j1-removebg-preview.png" // Your bus logo
+            src="/image/j1-removebg-preview.png"
             alt="Bus Service Logo"
             width={120}
             height={40}
@@ -19,20 +19,19 @@ export default function Login() {
           />
         </div>
         <div className="hidden sm:flex gap-4 text-sm">
-          <a href="/" className="hover:underline">Home</a>
-          <a href="/bus" className="hover:underline">Bus Ticketing</a>
-          <a href="/Schedule" className="hover:underline">Bus Schedule</a>
-          <a href="/contact" className="hover:underline">Contact Us</a>
-          <a href="/aboutus" className="hover:underline">About Us</a>
-          <a href="/login" className="hover:underline">Login</a>
+          <Link href="/" className="hover:underline">Home</Link>
+          <Link href="/bus" className="hover:underline">Bus Ticketing</Link>
+          <Link href="/Schedule" className="hover:underline">Bus Schedule</Link>
+          <Link href="/contact" className="hover:underline">Contact Us</Link>
+          <Link href="/aboutus" className="hover:underline">About Us</Link>
+          <Link href="/login" className="hover:underline">Login</Link>
         </div>
       </header>
 
-   
-      <section className="flex flex-col items-center justify-center flex-grow bg-opacity-60 bg-gradient-to-br  p-6 sm:p-10 rounded-lg shadow-2xl transform transition-all duration-1000 z-10 relative">
+      {/* Login Section */}
+      <section className="flex flex-col items-center justify-center flex-grow bg-opacity-60 bg-gradient-to-br p-6 sm:p-10 rounded-lg shadow-2xl transform transition-all duration-1000 z-10 relative">
         <h2 className="text-3xl sm:text-4xl font-semibold mb-6 animate-fade-in-up text-white">Login to Your Account</h2>
 
-        
         <form className="flex flex-col w-full max-w-md space-y-6 p-6 rounded-lg shadow-lg bg-gradient-to-r from-blue-500 to-purple-500">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-white mb-2">Email</label>
@@ -71,7 +70,7 @@ export default function Login() {
         {/* Registration Link */}
         <div className="mt-4 text-center animate-fade-in-up">
           <p className="text-sm">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/signup">
               <span className="text-blue-400 hover:underline">Sign up here</span>
             </Link>

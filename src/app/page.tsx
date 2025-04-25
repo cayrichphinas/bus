@@ -1,31 +1,14 @@
 import Image from "next/image";
+import Header from "@/components/header";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-cover bg-center bg-[url('/image/h1.jpg')] text-white animate-background-zoom">
-      {/* Header */}
-      <header className="flex justify-between items-center p-4 sm:px-8 border-b border-gray-700 bg-opacity-90 bg-black">
-        <div className="flex items-center">
-          <Image
-            src="/image/j1-removebg-preview.png"
-            alt="Bus Ticketing Logo"
-            width={120}
-            height={40}
-            className="object-contain"
-          />
-        </div>
-        <nav className="hidden sm:flex gap-6 text-sm">
-          <Link href="/" className="hover:underline">Home</Link>
-          <Link href="/bus" className="hover:underline">Bus Ticketing</Link>
-          <Link href="/schedule" className="hover:underline">Bus Schedule</Link>
-          <Link href="/contact" className="hover:underline">Contact Us</Link>
-          <Link href="/aboutus" className="hover:underline">About Us</Link>
-          <Link href="/login" className="hover:underline">Login</Link>
-        </nav>
-      </header>
-
-      {/* Hero Section */}
+    <div className="flex lex-col min-h-screen bg-cover bg-center bg-[url('/image/h1.jpg')] text-white animate-background-zoom">
+    <div>
+      <Header />
+      {/* Rest of the page content */}
+    </div>
       <section className="bg-green-900 bg-opacity-75 text-center py-6">
         <h1 className="text-2xl sm:text-4xl font-bold">Welcome to Cebu Bus Ticketing! 🚌</h1>
         <p className="mt-2 text-lg">Explore Cebu with ease - bus your ticketing now!</p>

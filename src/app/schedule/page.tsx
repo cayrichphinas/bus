@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <header className="flex justify-between items-center p-4 sm:px-8 border-b border-gray-700">
         <div className="flex items-center">
           <Image
-            src="/image/j1-removebg-preview.png" // Replace with your bus service logo
+            src="/image/j1-removebg-preview.png"
             alt="Bus Service Logo"
             width={120}
             height={40}
@@ -15,13 +16,14 @@ export default function Home() {
           />
         </div>
         <div className="flex gap-4 text-sm hidden sm:flex">
-          <a href="/" className="hover:underline">Home</a>
-          <a href="/bus" className="hover:underline">Bus Ticketing</a>
-          <a href="/schedule" className="hover:underline">Bus Schedule</a>
-          <a href="/contact" className="hover:underline">Contact Us</a>
-          <a href="/aboutus" className="hover:underline">About Us</a>
-          <a href="/login" className="hover:underline">Login</a>
+          <Link href="/" className="hover:underline">Home</Link>
+          <Link href="/bus" className="hover:underline">Bus Ticketing</Link>
+          <Link href="/schedule" className="hover:underline">Bus Schedule</Link>
+          <Link href="/contact" className="hover:underline">Contact Us</Link>
+          <Link href="/aboutus" className="hover:underline">About Us</Link>
+          <Link href="/login" className="hover:underline">Login</Link>
         </div>
+
         {/* Search Bar */}
         <div className="flex items-center border border-gray-600 rounded-md px-4 py-1">
           <input
@@ -39,55 +41,45 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Bus Schedule Section */}
-      <section className="flex-1 py-10 px-4 sm:px-16 bg-gray-900 bg-opacity-60">
-        <h2 className="text-center text-3xl font-bold mb-6"> Sundrays in Cebu City</h2>
-
-        {/* Bus Schedule Table */}
-        <div className="overflow-x-auto bg-gray-800 rounded-lg shadow-lg">
-          <table className="min-w-full table-auto text-left text-white">
-            <thead>
-              <tr className="bg-gray-700">
-                <th className="px-4 py-2">Route</th>
-                <th className="px-4 py-2">Departure</th>
-                <th className="px-4 py-2">Arrival</th>
-                <th className="px-4 py-2">Duration</th>
-                <th className="px-4 py-2">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* Sample schedule rows */}
-              <tr className="bg-gray-600 hover:bg-gray-700">
-                <td className="px-4 py-2">Cebu City - Mactan</td>
-                <td className="px-4 py-2">07:00 AM</td>
-                <td className="px-4 py-2">07:45 AM</td>
-                <td className="px-4 py-2">45m</td>
-                <td className="px-4 py-2 text-green-400">On Time</td>
-              </tr>
-              <tr className="bg-gray-600 hover:bg-gray-700">
-                <td className="px-4 py-2">Cebu City - Lapu-Lapu</td>
-                <td className="px-4 py-2">09:00 AM</td>
-                <td className="px-4 py-2">09:40 AM</td>
-                <td className="px-4 py-2">40m</td>
-                <td className="px-4 py-2 text-yellow-400">Delayed</td>
-              </tr>
-              <tr className="bg-gray-600 hover:bg-gray-700">
-                <td className="px-4 py-2">Cebu City - Consolacion</td>
-                <td className="px-4 py-2">11:00 AM</td>
-                <td className="px-4 py-2">11:50 AM</td>
-                <td className="px-4 py-2">50m</td>
-                <td className="px-4 py-2 text-green-400">On Time</td>
-              </tr>
-              <tr className="bg-gray-600 hover:bg-gray-700">
-                <td className="px-4 py-2">Cebu City - Talisay</td>
-                <td className="px-4 py-2">01:00 PM</td>
-                <td className="px-4 py-2">01:30 PM</td>
-                <td className="px-4 py-2">30m</td>
-                <td className="px-4 py-2 text-green-400">On Time</td>
-              </tr>
-              {/* More rows can be added here */}
-            </tbody>
-          </table>
+      {/* Login Form Section */}
+      <section className="flex-1 flex items-center justify-center px-4 sm:px-16 py-10 bg-gray-900 bg-opacity-60">
+        <div className="bg-gray-800 bg-opacity-80 rounded-xl shadow-xl p-8 max-w-md w-full">
+          <h2 className="text-2xl font-bold mb-6 text-center">Login to Your Account</h2>
+          <form className="space-y-4">
+            <div>
+              <label htmlFor="email" className="block mb-1 text-sm">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+                className="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label htmlFor="password" className="block mb-1 text-sm">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                className="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div className="text-right text-sm">
+              <Link href="/forgot-password" className="text-blue-400 hover:underline">Forgot Password?</Link>
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-md transition"
+            >
+              Login
+            </button>
+          </form>
+          <p className="mt-6 text-center text-sm">
+            Don’t have an account?{" "}
+            <Link href="/register" className="text-blue-400 hover:underline">
+              Register here
+            </Link>
+          </p>
         </div>
       </section>
 

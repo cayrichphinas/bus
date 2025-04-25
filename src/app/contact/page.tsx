@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <header className="flex justify-between items-center p-4 sm:px-8 border-b border-gray-700">
         <div className="flex items-center">
           <Image
-            src="/image/j1-removebg-preview.png" // Replace with your bus service logo
+            src="/image/j1-removebg-preview.png"
             alt="Bus Service Logo"
             width={120}
             height={40}
@@ -15,12 +16,12 @@ export default function Home() {
           />
         </div>
         <div className="flex gap-4 text-sm hidden sm:flex">
-          <a href="/" className="hover:underline">Home</a>
-          <a href="/bus" className="hover:underline">Bus Ticketing</a>
-          <a href="/schedule" className="hover:underline">Bus Schedule</a>
-          <a href="/contact" className="hover:underline">Contact Us</a>
-          <a href="/aboutus" className="hover:underline">About Us</a>
-          <a href="/login" className="hover:underline">Login</a>
+          <Link href="/" className="hover:underline">Home</Link>
+          <Link href="/bus" className="hover:underline">Bus Ticketing</Link>
+          <Link href="/schedule" className="hover:underline">Bus Schedule</Link>
+          <Link href="/contact" className="hover:underline">Contact Us</Link>
+          <Link href="/aboutus" className="hover:underline">About Us</Link>
+          <Link href="/login" className="hover:underline">Login</Link>
         </div>
       </header>
 
@@ -32,13 +33,11 @@ export default function Home() {
       </section>
 
       {/* Contact Us Section */}
-      <section className="flex-1 py-10 px-4 sm:px-16  bg-opacity-60">
+      <section className="flex-1 py-10 px-4 sm:px-16 bg-opacity-60">
         <div className="flex justify-center items-center">
-          {/* Form Box with Aesthetic Colors */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-500 p-8 rounded-lg shadow-lg w-full sm:w-1/2">
             <h2 className="text-center text-3xl font-bold text-white mb-6">Contact Us</h2>
 
-            {/* Contact Form */}
             <form className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-white" htmlFor="name">Name</label>
@@ -49,7 +48,7 @@ export default function Home() {
                   placeholder="Your Name"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-white" htmlFor="email">Email</label>
                 <input
@@ -76,7 +75,6 @@ export default function Home() {
                 >
                   Send
                 </button>
-                
               </div>
             </form>
           </div>
