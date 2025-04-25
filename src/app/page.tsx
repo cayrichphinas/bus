@@ -64,7 +64,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-blue-900 text-white text-center py-4">
-        <p className="text-sm">&copy; 2025 Bus Ticketing System. All rights reserved.</p>
+        <p className="text-sm">&copy; 2025 Bus Ticketing System. Develop By: CHERRECA</p>
       </footer>
     </div>
   );
